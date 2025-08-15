@@ -5,11 +5,16 @@ body
   background-size: 100%
   background-attachment: fixed
 
+blockquote
+  border-left-color: #2F9B66
+
 .mainLayout
   padding: 0px 15px 0
   position: relative
   top: 0
   left: 0
+  @media ( max-width: 767px )
+    margin-top: 20px  
 // .containerLayout
 //   &--grid
 //     height: 100vh
@@ -24,6 +29,10 @@ body
     background-color: white
     padding: 30px
     margin-bottom: 30px
+    border: 1px solid #f4f4f4
+    box-shadow: 0 5px 5px rgba(39, 63, 68, .1)
+    @media ( max-width: 767px )
+      padding: 15px 10px
     &:last-child
       margin-bottom: 0
     blockquote
@@ -40,9 +49,16 @@ body
       padding: 20px 0
     .pillsList
       padding-top: 10px
-      span
+      &--pill
         display: inline-block
         margin: 0 5px 5px 0
+        border: 1px solid #2F9B66
+        color: #2F9B66
+        span
+          font-size: 0.6rem
+      // span
+      //   display: inline-block
+      //   margin: 0 5px 5px 0
     .tabProjects
       padding-top: 30px
   // Tabs
@@ -71,3 +87,27 @@ body
   &--text
     p
       margin: 0 0 15px
+
+
+
+
+.tabSchool
+  .schoolName
+    margin: 0
+    padding: 0
+  .schoolInfo
+    display: flex
+    align-items: flex-end
+    @media ( max-width: 767px)
+      display: block
+    p
+      width: 50%
+      margin: 0
+      @media ( max-width: 767px)
+        width: 100%
+      &:last-child
+        text-align: right
+      span
+        font-size: 0.8rem
+        opacity: 0.5
+        font-style: italic

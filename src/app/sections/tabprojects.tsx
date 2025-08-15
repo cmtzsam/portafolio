@@ -86,14 +86,14 @@ export default function TabProjects() {
         {projects
           .filter(p => !filter || p.type === filter)
           .map(p => (
-            <Grid.Col key={p.id} span={6}>
+            <Grid.Col key={p.id} span={{ sm: 12, md: 6, lg: 6 }}>
               <Card shadow="sm" padding="lg" radius="md" withBorder className='tabProjectsSection--card'>
                 <Card.Section>
                   <Image src={p.image} height={250} alt={p.title} />
                 </Card.Section>
                 <Group justify="space-between"  className='tabProjectsSection--title'>
                   <h3>{p.title}</h3>
-                  <Badge color={p.type === 'tienda' ? 'green' : 'blue'}>
+                  <Badge color='gray'>
                     {p.type === 'tienda' ? 'Tienda online' : 'Sitio informativo'}
                   </Badge>
                 </Group>
@@ -106,9 +106,9 @@ export default function TabProjects() {
                 </div>
                 <Group justify="center" align="center" className='tabProjectsSection--btns'> 
                   <Grid w="100%">
-                  <Grid.Col span={6}>
+                  <Grid.Col span={{ sm: 12, md: 6, lg: 6 }}>
                     <Button
-                    color="blue"
+                    color="teal"
                     fullWidth
                     radius="md"
                     onClick={() => handleOpen(p)}
@@ -116,8 +116,9 @@ export default function TabProjects() {
                     Más información
                     </Button>
                   </Grid.Col>
-                  <Grid.Col span={6}>
+                  <Grid.Col span={{ sm: 12, md: 6, lg: 6 }}>
                     <Button
+                    color='teal'
                     variant="subtle"
                     fullWidth
                     radius="md"
@@ -140,7 +141,7 @@ export default function TabProjects() {
 
   return (
     <section className="contentPage--section tabProjectsSection">
-      <Blockquote color="blue" mt="xl">
+      <Blockquote color="teal" mt="xl">
         Proyectos recientes
       </Blockquote>
       <br />

@@ -1,8 +1,8 @@
-import { Blockquote, Spoiler, Pill } from '@mantine/core';
+import { Blockquote, Spoiler, Badge } from '@mantine/core';
 export default function TabAbout() {
   return (
     <section className="contentPage--section tabAbout">
-      <Blockquote color="blue"  mt="xl">
+      <Blockquote color="teal"  mt="xl">
         Acerca de mi
       </Blockquote>
       <h2>
@@ -22,7 +22,13 @@ export default function TabAbout() {
       <div className="pillsList">
       <h4>Me especializo en</h4>
         {['Shopify', 'WordPress', 'Woocommerce', 'React.js', 'Next.js', 'Vue.Js', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SASS', 'PHP', 'Laravel', 'HubSpot'].map((skill) => (
-          <Pill size='md' key={skill}>{skill}</Pill>
+          <Badge 
+          size='md' 
+          key={skill}
+          variant="gradient"
+          gradient={{ from: '#D6FAC8', to: '#FDEDD8', deg: 90 }}
+          className="pillsList--pill"
+          >{skill}</Badge>
         ))}
       </div>
     </section>

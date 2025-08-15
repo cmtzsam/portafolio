@@ -12,6 +12,7 @@ export default function BotonCorreo({ size }: { size?: 'sm' | 'md' | 'lg' }) {
       gradient={{ from: '#D6FAC8', to: '#FDEDD8', deg: 90 }}
       leftSection={<IconMail size={18} />}
       c="#2F9B66"
+      className='boton-correo'
     >
       Enviar correo
     </Button>
