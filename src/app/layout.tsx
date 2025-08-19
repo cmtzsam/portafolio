@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es-MX">
       <body className={`${dmSans.className} ${outfit.className}`}>
         <MantineProvider>
           <main className="mainLayout">
