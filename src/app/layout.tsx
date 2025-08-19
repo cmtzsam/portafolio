@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MantineProvider } from '@mantine/core';
 import { DM_Sans, Outfit } from 'next/font/google'
 import ContainerLayout from './containerlayout';
+import Script from "next/script";
 
 import "../styles/mainstyle.sass";
 import '@mantine/core/styles.css'
@@ -29,6 +30,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-MX">
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-R3NECQ5Z6V"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-R3NECQ5Z6V');
+        `}
+      </Script>
       <body className={`${dmSans.className} ${outfit.className}`}>
         <MantineProvider>
           <main className="mainLayout">
