@@ -195,7 +195,7 @@ export default function TabProjects() {
             </div>
             <Group gap="xs" mb="md">
               {selectedProject.pildoras.map((pildora, idx) => (
-                <Badge key={idx} color="blue" variant="light">
+                <Badge key={idx} color="teal" variant="light">
                   {pildora}
                 </Badge>
               ))}

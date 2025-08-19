@@ -4,14 +4,6 @@ export default function TabSchool() {
   const data = [
     {
       emoji: '🎓',
-      value: 'Maestria',
-      career: 'Maestría en Inteligencia Artificial',
-      schoolname: 'Tecnológico de Monterrey',
-      place: 'Universidad Tecnológico de Monterrey',
-      fecha: '2025',
-    },
-    {
-      emoji: '🎓',
       value: 'Universidad',
       career: 'Ingeniería en Sistemas',
       schoolname: 'Facultad de Ingeniería Mecánica y Eléctrica',

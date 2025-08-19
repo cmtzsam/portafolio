@@ -52,9 +52,9 @@ const Sidebar = () => {
                   align="center"                
                   className="socialgrid"
                 >
-                  <a href="#!"><FaGithub /></a>
-                  <a href="#!"><FaLinkedin /></a>
-                  <a href="#!"><FaFacebook /></a>
+                  <a href="https://github.com/cmtzsam/" target='_blank'><FaGithub /></a>
+                  <a href="https://www.linkedin.com/in/cams310196/" target='_blank'><FaLinkedin /></a>
+                  {/* <a href="#!" target='_blank'><FaFacebook /></a> */}
                 </Flex>
               </Grid.Col>
             </Grid>
