@@ -1,23 +1,53 @@
 "use client";
-import { useEffect, useId, useRef } from "react";
+
+import React, { useEffect, useId, useRef, useCallback } from "react";
 import Script from "next/script";
 
-type Props = { region?: string; portalId: string; formId: string; className?: string };
+declare global {
+  interface Window {
+    hbspt?: {
+      forms: {
+        create: (options: {
+          region?: string;
+          portalId: string;
+          formId: string;
+          target: string;
+        }) => void;
+      };
+    };
+  }
+}
 
-export default function HubspotEmbed({ region, portalId, formId, className }: Props) {
-  const targetId = useId().replace(/:/g, "_");
+const HubspotEmbed = ({
+  region,
+  portalId,
+  formId,
+  targetId: explicitTargetId,
+  className,
+}: {
+  region?: string;
+  portalId: string;
+  formId: string;
+  targetId?: string;
+  className?: string;
+}) => {
+  const autoId = useId().replace(/:/g, "_");
+  const targetId = explicitTargetId ?? `hs-form-${autoId}`;
+
   const init = useRef(false);
 
-  const create = () => {
-    if (init.current || !window.hbspt) return;
+  const create = useCallback(() => {
+    if (init.current || typeof window === "undefined" || !window.hbspt) return;
     const el = document.getElementById(targetId);
-    if (!el || el.childNodes.length) { init.current = true; return; }
+    if (!el) return;
+    if (el.childNodes.length > 0) { init.current = true; return; }
     window.hbspt.forms.create({ region, portalId, formId, target: `#${targetId}` });
     init.current = true;
-  };
+  }, [region, portalId, formId, targetId]);
 
-  // Si el script ya estaba en la página, intenta crear al hidratar
-  useEffect(() => { create(); }, [region, portalId, formId]);
+  useEffect(() => {
+    create();
+  }, [create]);
 
   return (
     <>
@@ -30,4 +60,6 @@ export default function HubspotEmbed({ region, portalId, formId, className }: Pr
       <div id={targetId} className={className} />
     </>
   );
-}
+};
+
+export default HubspotEmbed;
