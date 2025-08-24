@@ -1,18 +1,23 @@
 'use client';
+import {useTranslations, useLocale} from 'next-intl';
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
-import { Grid, Flex, Button } from '@mantine/core';
-import BotonCorreo from './BotonCorreo';
-import "../styles/sidebar.sass";
+import { Grid, Flex } from '@mantine/core';
 import ModalContacto from './ModalContacto/ModalContacto';
 import HubspotEmbed from './HubspotEmbed/HubspotEmbed';
 
+import BotonCorreo from './BotonCorreo';
+import "../styles/sidebar.sass";
+
 const Sidebar = () => {
   const [opened, setOpened] = useState(false);
+  const t = useTranslations('Sidebar');
+  const locale = useLocale();
 
   return (
-    <aside className="sideBarProfile">
+    <aside className="sideBarProfile" >
       <div className="sideBarProfile--picture">
         <Image
           src="/carlos.png"
@@ -29,7 +34,7 @@ const Sidebar = () => {
           <div className="sideBarProfile--dataTable-line "> 
             <Grid>
               <Grid.Col span={4}>
-                <span className='sideBarProfile--dataTable-ques' >Ubicación</span>
+                <span className='sideBarProfile--dataTable-ques' >{t('hello')}</span>
               </Grid.Col>
               <Grid.Col span={8}>
                 <span className='sideBarProfile--dataTable-ans'>Monterrey, México</span>
