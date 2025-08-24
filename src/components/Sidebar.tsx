@@ -1,11 +1,16 @@
 'use client';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa'
-import { Grid, Flex } from '@mantine/core';
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import { Grid, Flex, Button } from '@mantine/core';
 import BotonCorreo from './BotonCorreo';
 import "../styles/sidebar.sass";
+import ModalContacto from './ModalContacto/ModalContacto';
+import HubspotEmbed from './HubspotEmbed/HubspotEmbed';
 
 const Sidebar = () => {
+  const [opened, setOpened] = useState(false);
+
   return (
     <aside className="sideBarProfile">
       <div className="sideBarProfile--picture">
@@ -61,7 +66,30 @@ const Sidebar = () => {
           </div>
         </div>
         <div className='py-4'>
-          <BotonCorreo size="lg" />
+          <BotonCorreo 
+            size="lg" 
+            onClick={() => setOpened(true)}
+            label='Deja tu mensaje'
+          />
+          <ModalContacto
+            modalContactoId="modal-contacto"
+            opened={opened}
+            onClose={() => setOpened(false)}
+            title="📩 Deja tu mensaje"
+            centered
+            size="lg"
+            fullScreenOnMobile
+            radius="md"
+            padding="md"
+          >
+            <div style={{ paddingTop: 8 }}>
+              <HubspotEmbed
+                region="na1"
+                portalId="45329697"
+                formId="ec82daae-e342-4219-a818-41355514baf7"
+              />
+            </div>
+          </ModalContacto>
         </div>
         <p className="sideBarProfile--endText">
           © 2025. Todos los derechos reservados.
