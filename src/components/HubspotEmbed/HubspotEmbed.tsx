@@ -17,7 +17,14 @@ declare global {
     };
   }
 }
-
+<style jsx global>{`
+  .hs-form { margin: 0 !important; }
+  .hs-form form { margin: 0 !important; }
+  .hs-form fieldset { margin: 0 !important; padding: 0 !important; }
+  .hs-form .hs-form-field { margin-bottom: 12px !important; }
+  .hs-form .hs_submit { margin: 0 !important; padding-bottom: env(safe-area-inset-bottom); }
+  .hs-form .legal-consent-container { margin: 8px 0 0 !important; }
+`}</style>
 const HubspotEmbed = ({
   region,
   portalId,
@@ -58,8 +65,15 @@ const HubspotEmbed = ({
         onLoad={create}
       />
       <div id={targetId} className={className} />
+      <style jsx global>{`
+        /* Compact HubSpot form spacing in modal on mobile */
+        .hs-form { margin-bottom: 0 !important; }
+        .hs-form .hs_submit { margin-bottom: 0 !important; }
+        .hs-form .legal-consent-container { margin: 8px 0 0 !important; }
+      `}</style>
     </>
   );
 };
 
 export default HubspotEmbed;
+
