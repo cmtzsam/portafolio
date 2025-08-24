@@ -1,6 +1,6 @@
 "use client";
 
-import { Modal, MantineSize } from '@mantine/core';
+import { Modal, MantineSize, ScrollArea } from '@mantine/core';
 import { useMantineTheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 
@@ -53,9 +53,9 @@ const ModalContacto = ({
       withinPortal
       lockScroll
       trapFocus
-      scrollAreaComponent="div"
+      scrollAreaComponent={ScrollArea.Autosize}
       keepMounted
-      closeOnClickOutside={true}      
+      closeOnClickOutside={false}   
     >
       <div style={{ width: '100%', maxWidth: 800, marginInline: 'auto', minHeight: 300 }}>
         {children}
