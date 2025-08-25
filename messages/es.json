@@ -18,10 +18,19 @@
     "sbemail": "E-mail",
     "sbsocial": "Redes",
     "sbsendmsg": "Deja tu mensaje",
-    "sbcopyright": "© 2025. Todos los derechos reservados."
+    "sbcopyright": "© 2025. Todos los derechos reservados.",
+    "sbhubspotid": "ec82daae-e342-4219-a818-41355514baf7"
   },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, es {🇲🇽 Español} en {🇺🇸 English} other {Unknown}}"
+  },  
+  "Navigation": {
+    "home": "Home",
+    "pathnames": "Pathnames"
+  },  
   "LocaleLayout": {
     "title": "C. Alberto Martínez - Portfolio",
     "description": "Desarrollador web con más de 10 años de experiencia, me he especializado en áreas como el marketing digital y el comercio electrónico."
-  }   
+  }
 }

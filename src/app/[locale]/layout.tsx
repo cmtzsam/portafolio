@@ -13,6 +13,7 @@ import Script from "next/script";
 import "../../styles/mainstyle.sass";
 import '@mantine/core/styles.css'
 
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
 }
@@ -72,7 +73,8 @@ export default async function LocaleLayout({
       </Script>      
       <body className={`${dmSans.className} ${outfit.className}`}  >
         <NextIntlClientProvider>
-          <MantineProvider>
+          <MantineProvider>       
+
             <main className="mainLayout">
               <ContainerLayout>
                 {children}

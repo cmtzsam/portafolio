@@ -18,8 +18,17 @@
     "sbemail": "E-mail",
     "sbsocial": "Social",
     "sbsendmsg": "Send message",
-    "sbcopyright": "© 2025. All rights reserved."
+    "sbcopyright": "© 2025. All rights reserved.",
+    "sbhubspotid": "685af559-89db-4803-a8b2-2686799667e2"
   },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, es {🇲🇽 Español} en {🇺🇸 English} other {Unknown}}"
+  },  
+  "Navigation": {
+    "home": "Home",
+    "pathnames": "Pathnames"
+  },  
   "LocaleLayout": {
     "title": "C. Alberto Martínez - Portfolio",
     "description": "Web developer with over 10 years of experience, specialized in areas such as digital marketing and e-commerce."
