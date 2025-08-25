@@ -5,7 +5,6 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {routing} from '@/i18n/routing';
 
 import type { Metadata } from 'next';
-import type { LayoutProps } from 'next-intl';
 
 // import type { Metadata } from "next";
 import { MantineProvider } from '@mantine/core';
