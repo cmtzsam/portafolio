@@ -4,6 +4,9 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 // import {clsx} from 'clsx';
 import {routing} from '@/i18n/routing';
 
+import type { Metadata } from 'next';
+import type { LayoutProps } from 'next-intl';
+
 // import type { Metadata } from "next";
 import { MantineProvider } from '@mantine/core';
 import { DM_Sans, Outfit } from 'next/font/google'
@@ -30,9 +33,9 @@ const outfit = Outfit({
 })
 
 export async function generateMetadata(
-  props: Omit<LayoutProps<'/[locale]'>, 'children'>
-) {
-  const {locale} = await props.params;
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
 
   const t = await getTranslations({
     locale: locale as Locale,
