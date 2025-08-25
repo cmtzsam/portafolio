@@ -1,12 +1,8 @@
-import {NextConfig} from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin({
-  experimental: {
-    createMessagesDeclaration: './messages/en.json'
-  }
-});
+const withNextIntl = createNextIntlPlugin();
+const nextConfig = {
+  reactStrictMode: true
+};
 
-const config: NextConfig = {};
-
-export default withNextIntl(config);
+export default withNextIntl(nextConfig);

@@ -1,4 +1,7 @@
 {
+  "Manifest": {
+    "name": "Codificarlos"
+  },
   "TabAbout": {
     "aboutMe": "Sobre mí",
     "helloMe": "Hola, soy Carlos",
