@@ -5,6 +5,7 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {routing} from '@/i18n/routing';
 
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 
 // import type { Metadata } from "next";
 import { MantineProvider } from '@mantine/core';
@@ -49,7 +50,7 @@ export async function generateMetadata(
 export default async function LocaleLayout({
   children,
   params
-}: LayoutProps<'/[locale]'>) {
+}: { children: ReactNode; params: Promise<{ locale: string }> }) {
   // Ensure that the incoming `locale` is valid
   const {locale} = await params;
   if (!hasLocale(routing.locales, locale)) {
