@@ -1,5 +1,5 @@
 'use client';
-import {useTranslations, useLocale} from 'next-intl';
+import {useTranslations} from 'next-intl';
 
 import React, { useState } from 'react';
 import Image from 'next/image';
@@ -14,7 +14,6 @@ import "../styles/sidebar.sass";
 const Sidebar = () => {
   const [opened, setOpened] = useState(false);
   const t = useTranslations('Sidebar');
-  const locale = useLocale();
 
   return (
     <aside className="sideBarProfile" >
@@ -34,7 +33,7 @@ const Sidebar = () => {
           <div className="sideBarProfile--dataTable-line "> 
             <Grid>
               <Grid.Col span={4}>
-                <span className='sideBarProfile--dataTable-ques' >{t('hello')}</span>
+                <span className='sideBarProfile--dataTable-ques' >{t('sblocation')}</span>
               </Grid.Col>
               <Grid.Col span={8}>
                 <span className='sideBarProfile--dataTable-ans'>Monterrey, México</span>
@@ -44,7 +43,7 @@ const Sidebar = () => {
           <div className="sideBarProfile--dataTable-line "> 
             <Grid>
               <Grid.Col span={4}>
-                <span className='sideBarProfile--dataTable-ques' >Email</span>
+                <span className='sideBarProfile--dataTable-ques' >{t('sbemail')}</span>
               </Grid.Col>
               <Grid.Col span={8}>
                 <span className='sideBarProfile--dataTable-ans'>cmtz.sam@outlook.com</span>
@@ -54,7 +53,7 @@ const Sidebar = () => {
           <div className="sideBarProfile--dataTable-line "> 
             <Grid>
               <Grid.Col span={4}>
-                <span className='sideBarProfile--dataTable-ques' >Redes</span>
+                <span className='sideBarProfile--dataTable-ques' >{t('sbsocial')}</span>
               </Grid.Col>
               <Grid.Col span={8}>
                 <Flex 
@@ -74,13 +73,13 @@ const Sidebar = () => {
           <BotonCorreo 
             size="lg" 
             onClick={() => setOpened(true)}
-            label='Deja tu mensaje'
+            label={t('sbsendmsg')}
           />
           <ModalContacto
             modalContactoId="modal-contacto"
             opened={opened}
             onClose={() => setOpened(false)}
-            title="📩 Deja tu mensaje"
+            title={`📩 ${t('sbsendmsg')}`}
             centered
             size="lg"
             fullScreenOnMobile
@@ -97,7 +96,7 @@ const Sidebar = () => {
           </ModalContacto>
         </div>
         <p className="sideBarProfile--endText">
-          © 2025. Todos los derechos reservados.
+          {t('sbcopyright')}
         </p>
       </div>
     </aside>

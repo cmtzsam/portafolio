@@ -1,54 +1,27 @@
 {
-  "Sidebar": {
-    "hello": "Hello",
-    "menu": {
-      "home": "Home",
-      "projects": "Projects",
-      "contact": "Contact"
-    }
-  },  
-  "Error": {
-    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
-    "title": "Something went wrong!"
+  "TabAbout": {
+    "aboutMe": "About me",
+    "helloMe": "Hello, I’m Carlos",
+    "textMe1": "I am a web developer with over 10 years of experience, specializing in areas such as digital marketing and e-commerce. Throughout my career, I have collaborated with various organizations, focusing on the creation and maintenance of high-level websites, as well as the design and development of landing pages and custom web solutions.",
+    "textMe2": "My technical skills include solid expertise in front-end technologies such as HTML (Jade-Pug), CSS (SASS/SCSS/Less), and JavaScript (Webpack, Gulp, Vue). In addition, I have basic knowledge in back-end development, mainly in PHP (Laravel), and an intermediate level of experience in WordPress. Regarding CMS platforms, I am an expert in HubSpot, working with it since 2015 to the present, and I also have extensive knowledge of Shopify.",
+    "textMe3": "My experience is complemented by a set of design skills, using tools such as Photoshop, Adobe XD, Figma, and Sketch.",
+    "titleBadges": "My stack includes"
   },
-  "IndexPage": {
-    "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes.",
-    "title": "next-intl example"
+  "TabEnd": {
+    "title": "Languages, courses and certificates",
+    "tableTitle_1": "Category",
+    "tableTitle_2": "Title",
+    "tableTitle_3": "Details"
+  },  
+  "Sidebar": {
+    "sblocation": "Location",
+    "sbemail": "E-mail",
+    "sbsocial": "Social",
+    "sbsendmsg": "Send message",
+    "sbcopyright": "© 2025. All rights reserved."
   },
   "LocaleLayout": {
-    "title": "next-intl example"
-  },
-  "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
-  },
-  "Manifest": {
-    "name": "next-intl example"
-  },
-  "Navigation": {
-    "home": "Home",
-    "pathnames": "Pathnames"
-  },
-  "NotFoundPage": {
-    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
-    "title": "Page not found"
-  },
-  "PageLayout": {
-    "links": {
-      "docs": {
-        "description": "Learn more about next-intl in the official docs.",
-        "href": "https://next-intl.dev",
-        "title": "Docs"
-      },
-      "source": {
-        "description": "Browse the source code of this example on GitHub.",
-        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
-        "title": "Source code"
-      }
-    }
-  },
-  "PathnamesPage": {
-    "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>",
-    "title": "Pathnames"
+    "title": "C. Alberto Martínez - Portfolio",
+    "description": "Web developer with over 10 years of experience, specialized in areas such as digital marketing and e-commerce."
   }
 }

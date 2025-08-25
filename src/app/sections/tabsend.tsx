@@ -1,8 +1,13 @@
-import { Blockquote, Table, Accordion, AccordionItem, AccordionControl, AccordionPanel, TableTbody, TableThead, TableTr, TableTh, TableTd } from '@mantine/core';
+'use client';
+import { Blockquote, Table, TableTbody, TableThead, TableTr, TableTh, TableTd } from '@mantine/core';
+import { useTranslations, useLocale } from 'next-intl';
 
-export default function TabsEnd() {
-  // Datos reales del CV: idiomas, cursos y certificaciones
-  const items = [
+const items: Record<'es' | 'en', Array<{
+  category: string;
+  name: string;
+  details: string;
+}>> = {
+  es: [
     {
       category: 'Idioma',
       name: 'Español',
@@ -15,7 +20,7 @@ export default function TabsEnd() {
     },
     {
       category: 'Certificación',
-      name: 'Curso completo Ruby – Desde las Bases hasta Rails',
+      name: 'Curso completo Ruby - Desde las Bases hasta Rails',
       details: 'Udemy, Jul. 2024',
     },
     {
@@ -33,8 +38,49 @@ export default function TabsEnd() {
       name: 'Gatsby de cero a experto',
       details: 'Udemy, Mar. 2023',
     },
-  ];
-  const rows = items.map((item, idx) => (
+  ],
+  en: [
+    {
+      category: 'Language',
+      name: 'Spanish',
+      details: 'Native',
+    },
+    {
+      category: 'Language',
+      name: 'English',
+      details: 'Intermediate B2',
+    },
+    {
+      category: 'Certification',
+      name: 'Complete Ruby Course - From Basics to Rails',
+      details: 'Udemy, Jul. 2024',
+    },
+    {
+      category: 'Certification',
+      name: 'Inbound Marketing',
+      details: 'HubSpot, Jul. 2023; Expires Aug. 2026',
+    },
+    {
+      category: 'Certification',
+      name: 'Marketing Software',
+      details: 'HubSpot, Jul. 2023; Expires Aug. 2026',
+    },
+    {
+      category: 'Certification',
+      name: 'Gatsby from Zero to Expert',
+      details: 'Udemy, Mar. 2023',
+    },
+  ],
+}
+
+export default function TabsEnd() {
+
+  const t = useTranslations('TabEnd');
+
+  // Datos reales del CV: idiomas, cursos y certificaciones
+  const locale = useLocale() as 'es' | 'en';
+  const data = items[locale] || items.es;
+  const rows = data.map((item, idx) => (
     <TableTr key={item.category + item.name + idx}>
       <TableTd>{item.category}</TableTd>
       <TableTd>{item.name}</TableTd>
@@ -45,16 +91,16 @@ export default function TabsEnd() {
     <>
       <section className="contentPage--section tabEnd">
         <Blockquote color="teal" mt="xl">
-          Idiomas, cursos y certificados
+          {t('title')}
         </Blockquote>
         <br />
         <div className="tabEnd--table">
           <Table striped highlightOnHover withTableBorder>
             <TableThead>
               <TableTr>
-                <TableTh>Categoría</TableTh>
-                <TableTh>Nombre</TableTh>
-                <TableTh>Detalles</TableTh>
+                <TableTh>{t('tableTitle_1')}</TableTh>
+                <TableTh>{t('tableTitle_2')}</TableTh>
+                <TableTh>{t('tableTitle_3')}</TableTh>
               </TableTr>
             </TableThead>
             <TableTbody>{rows}</TableTbody>

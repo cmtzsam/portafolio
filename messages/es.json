@@ -1,54 +1,27 @@
 {
-  "Sidebar": {
-    "hello": "Hola",
-    "menu": {
-      "home": "Inicio",
-      "projects": "Proyectos",
-      "contact": "Contacto"
-    }
-  },  
-  "Error": {
-    "description": "<p>Es ist leider ein Problem aufgetreten.</p><p>Du kannst versuchen <retry>diese Seite neu zu laden</retry>.</p>",
-    "title": "Etwas ist schief gelaufen!"
+  "TabAbout": {
+    "aboutMe": "Sobre mí",
+    "helloMe": "Hola, soy Carlos",
+    "textMe1": "Soy un desarrollador web con más de 10 años de experiencia, me he especializado en áreas como el marketing digital y el comercio electrónico. Durante mi trayectoria, he colaborado con diversas organizaciones, enfocándome en la creación y el mantenimiento de sitios web de alto nivel, así como en el diseño y desarrollo de landing pages y soluciones web personalizadas.",
+    "textMe2": "Mis habilidades técnicas incluyen un dominio sólido de tecnologías front-end como HTML (Jade-Pug), CSS (SASS/SCSS/Less) y JavaScript (Webpack, Gulp, Vue). Además, poseo conocimientos básicos en el ámbito del back-end, principalmente en PHP (Laravel), y un nivel intermedio de experiencia en Wordpress. En cuanto a plataformas CMS, soy un experto en HubSpot, trabajando con ella desde el año 2015 hasta la fecha, y también cuento con un amplio conocimiento en Shopify.",
+    "textMe3": "Mi experiencia se complementa con un conjunto de habilidades en diseño, utilizando herramientas como Photoshop, Adobe XD, Figma y Sketch.",
+    "titleBadges": "Me especializo en"
   },
-  "IndexPage": {
-    "description": "Dies ist ein Beispiel, das die Verwendung von <code>next-intl</code> mit dem Next.js App Router demonstriert. Bei Ändern der Sprache rechts oben ändert sich der Inhalt dieser Seite.",
-    "title": "next-intl Beispiel"
+  "TabEnd": {
+    "title": "Idiomas, cursos y certificados",
+    "tableTitle_1": "Categoría",
+    "tableTitle_2": "Título",
+    "tableTitle_3": "Detalles"
+  },
+  "Sidebar": {
+    "sblocation": "Ubicación",
+    "sbemail": "E-mail",
+    "sbsocial": "Redes sociales",
+    "sbsendmsg": "Deja tu mensaje",
+    "sbcopyright": "© 2025. Todos los derechos reservados."
   },
   "LocaleLayout": {
-    "title": "next-intl Beispiel"
-  },
-  "LocaleSwitcher": {
-    "label": "Sprache ändern",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unbekannt}}"
-  },
-  "Manifest": {
-    "name": ""
-  },
-  "Navigation": {
-    "home": "Start",
-    "pathnames": "Pfadnamen"
-  },
-  "NotFoundPage": {
-    "description": "Bitte überprüfe die Addressleiste deines Browsers oder verwende die Navigation um zu einer bekannten Seite zu wechseln.",
-    "title": "Seite nicht gefunden"
-  },
-  "PageLayout": {
-    "links": {
-      "docs": {
-        "description": "Erfahre mehr über next-intl in der offiziellen Dokumentation.",
-        "href": "https://next-intl.dev",
-        "title": "Dokumentation"
-      },
-      "source": {
-        "description": "Sieh dir den Quellcode dieses Beispiels auf GitHub an.",
-        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
-        "title": "Quellcode"
-      }
-    }
-  },
-  "PathnamesPage": {
-    "description": "<p>Auch die Pfadnamen sind internationalisiert.</p><p>Wenn du die Standardsprache Englisch verwendest, siehst du <code>/en/pathnames</code> in der Adressleiste des Browsers auf dieser Seite.</p><p>Wenn du die Sprache auf Deutsch änderst, wird die URL entsprechend lokalisiert (<code>/de/pfadnamen</code>).</p>",
-    "title": "Pfadnamen"
-  }
+    "title": "C. Alberto Martínez - Portfolio",
+    "description": "Desarrollador web con más de 10 años de experiencia, me he especializado en áreas como el marketing digital y el comercio electrónico."
+  }   
 }

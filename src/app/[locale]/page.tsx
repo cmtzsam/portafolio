@@ -1,25 +1,19 @@
-import PageLayout from '@/components/PageLayout';
-import {Locale, useTranslations} from 'next-intl';
-import {setRequestLocale} from 'next-intl/server';
-import {use} from 'react';
+import TabAbout from '../sections/tababout';
+import TabProjects from '../sections/tabprojects';
+import TabSchool from '../sections/tabschool';
+import TabJobs from '../sections/tabsjobs';
+import TabsEnd from '../sections/tabsend';
 
-export default function IndexPage({params}: PageProps<'/[locale]'>) {
-  const {locale} = use(params);
 
-  // Enable static rendering
-  setRequestLocale(locale as Locale);
-
-  const t = useTranslations('IndexPage');
+export default function IndexPage() {
 
   return (
-    <PageLayout title={t('title')}>
-      <p className="max-w-[590px]">
-        {t.rich('description', {
-          code: (chunks) => (
-            <code className="font-mono text-white">{chunks}</code>
-          )
-        })}
-      </p>
-    </PageLayout>
+    <div className="contentPage">
+      <TabAbout />
+      <TabProjects />
+      <TabSchool />
+      <TabJobs />
+      <TabsEnd />
+    </div>
   );
 }
